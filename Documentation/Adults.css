@@ -1,0 +1,62 @@
+html {
+    font-size: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+}
+
+td {
+    text-align: center;
+}
+
+codecomment {
+    color:red;
+}
+
+td .description {
+    text-align: left;
+}
+
+.example {
+    list-style-type: none;
+}
+
+.API {
+    background-color: rgb(200,200,200);
+}
+
+#Interests {
+    background-color: rgb(100,100,100);
+}
+
+tr:nth-child(even) td {
+    background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+    background-color: rgb(245,245,245);
+}
+
+
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    padding: 1em 1.5em;
+    width: fit-content;
+}
+

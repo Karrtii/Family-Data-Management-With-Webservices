@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Adults.css">
+        <title>My test page</title>
+    </head>
+    <body>
+        <h2>Adults Data Web API Documentation</h2>
+
+        <h3>Adult</h3>
+        <section>
+            The Adult is sent back and forth as json.<br>
+            The json format is seen in the example below:<br>
+            <pre>
+{
+    "JobTitle": "Tutor", 
+    "ID": 0,
+    "FirstName": "Aryan",
+    "LastName": "Gifford",
+    "HairColor": "Black",
+    "EyeColor": "Brown",
+    "Age": 56,
+    "Weight": 99.2,
+    "Height": 172,
+    "Sex": "M"
+}
+            </pre>
+
+        </section>
+        <table>
+            <tr>
+                <th>
+                    API
+                </th>
+                <th>
+                    Request
+                </th>
+                <th>
+                    Sub-path
+                </th>
+                <th>
+                    Description
+                </th>
+
+                <th>
+                    Exceptions
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="5" class="API">/Adults</th>
+                <td>GET</td>
+                <td></td>
+                <td>
+                    <section class="description">
+                        This request will return an Adult List. <br>
+                        <br>
+                    </section>
+                </td>
+
+                <td>
+                    May return 500 Internal Server Error, if something fails.
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td></td>
+                <td><section class="description">
+                        Use this to create a new Adult. Returns the created Adult. Provide the Adult as json in the request body.<br>
+                        Example:
+                        <ul class="example">
+                            <li></li>
+                        </ul>
+                    </section></td>
+                <td>
+                    <p>
+                        May return 500 Internal Server Error, if something fails when creating the adult.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/{id:int}</td>
+                <td>
+                    <section class="description">
+                        Use this to delete an Adult. Provide the <b>id</b> for the Adult to delete.<br>
+                        Example:
+                        <ul class="example">
+                            <li>.../Adults/5 </li>
+                            <li>.../Adults?id=3</li>
+                        </ul>
+                    </section>
+                </td>
+                <td>
+                    <p>
+                        May return 204 No content<br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <h3>User</h3>
+        <section>
+            The User is sent back and forth as json.<br>
+            The json format is seen in the example below:<br>
+            <pre>
+{
+"username":"Alex",
+"city":"Horsens",
+"age":15,
+"password":"123456"
+}
+
+</pre>
+            <table>
+            <tr>
+                <th>
+                    API
+                </th>
+                <th>
+                    Request
+                </th>
+                <th>
+                    Sub-path
+                </th>
+                <th>
+                    Description
+                </th>
+
+                <th>
+                    Exceptions
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="5" class="API">/Users</th>
+                <td>GET</td>
+                <td>/{username:string&password:string}</td>
+                <td>
+                    <section class="description">
+                        This request will return an User and validate login. <br>
+                        <br>
+                    </section>
+                </td>
+
+                <td>
+                    May return 404 Not Found, if something fails when logging in.
+                </td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td></td>
+                <td>
+                    <section class="description">
+                        Use this to create a new User. Provide the User as json in the request body.<br>
+                    </section>
+                </td>
+                <td>
+                    <p>
+                        May return 409 Conflict, if user already exists.
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>
